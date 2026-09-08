@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Decifra Óleo | CTF do Brasil</title>
+<meta name="description" content="Aprenda a ler laudos de análise de óleo hidráulico e lubrificante industrial — NAS 1638, ISO 4406, TAN, água em ppm, viscosidade — em 48 horas. Guia digital + planilha Semáforo de Decisão + cartão de bolso. R$ 67.">
+<meta name="theme-color" content="#0c2a45">
+<link rel="canonical" href="https://ctfdobrasil.com.br/decifra-oleo/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Decifra Óleo: leia qualquer laudo de análise de óleo em 48h">
+<meta property="og:description" content="Do 'não sei o que isso significa' para 'sei o que este laudo está dizendo e o que fazer' — sem depender de laboratório, fornecedor ou colega mais experiente.">
+<meta property="og:image" content="assets/img/og-decifra-oleo.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="assets/img/Logo_CTF_Brasil.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
+
+<header class="site-header" id="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#topo" aria-label="CTF do Brasil — Decifra Óleo">
+      <img src="assets/img/Logo_CTF_Brasil.svg" alt="CTF do Brasil" width="118" height="70"
+           onerror="this.remove();var s=document.getElementById('brand-fallback');if(s)s.hidden=false">
+      <strong id="brand-fallback" class="brand-fallback" hidden>CTF do Brasil</strong>
+    </a>
+
+    <nav class="site-nav" aria-label="Seções">
+      <a href="#solucao">Solução</a>
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#faq">Perguntas</a>
+    </nav>
+
+    <a class="btn btn-primary btn-sm header-cta" href="#comprar" data-buy>
+      Garantir por R$&nbsp;67
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="menu-mobile" id="menu-mobile" hidden>
+    <a href="#solucao">Solução</a>
+    <a href="#conteudo">Conteúdo</a>
+    <a href="#autoridade">Quem faz</a>
+    <a href="#faq">Perguntas</a>
+    <a class="btn btn-primary" href="#comprar" data-buy>Garantir por R$&nbsp;67</a>
+  </div>
+</header>
+
+<main id="conteudo-principal">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="topo">
+    <div class="wrap hero-grid">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-rule"></span> Guia prático · CTF do Brasil</p>
+        <h1>
+          Aprenda a ler qualquer laudo de análise de óleo em
+          <span class="hl">48 horas</span>.
+        </h1>
+        <p class="lede">
+          NAS 1638, ISO 4406, TAN, água em ppm, viscosidade. Você recebe o laudo e decide,
+          com número na mão, se troca ou não troca o óleo — sem esperar o laboratório,
+          o fornecedor ou o colega mais antigo te explicar.
+        </p>
+
+        <ul class="hero-checks">
+          <li>Do zero ao laudo lido em 48&nbsp;h</li>
+          <li>Sem pré-requisito técnico</li>
+          <li>R$&nbsp;67 à vista — decisão de impulso</li>
+        </ul>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#comprar" data-buy>Destravar o meu laudo</a>
+          <a class="btn btn-ghost btn-lg" href="#conteudo">Ver o que vem dentro</a>
+        </div>
+
+        <p class="hero-note">
+          Acesso imediato após a compra · 7 dias de garantia incondicional
+        </p>
+      </div>
+
+      <aside class="hero-panel" data-reveal aria-label="Exemplo de laudo de análise de óleo">
+        <div class="laudo-card">
+          <div class="laudo-head">
+            <span class="laudo-tag">Laudo físico-químico · amostra 0472</span>
+            <span class="laudo-eq">Unidade hidráulica — injetora 320 t</span>
+          </div>
+          <table class="laudo-table">
+            <thead>
+              <tr><th>Indicador</th><th>Resultado</th><th><span class="sr-only">Situação</span></th></tr>
+            </thead>
+            <tbody>
+              <tr><td>ISO 4406</td><td>21/19/16</td><td><span class="dot dot-red" title="Ação"></span></td></tr>
+              <tr><td>NAS 1638</td><td>Classe 10</td><td><span class="dot dot-red" title="Ação"></span></td></tr>
+              <tr><td>Água (Karl Fischer)</td><td>480 ppm</td><td><span class="dot dot-amber" title="Monitorar"></span></td></tr>
+              <tr><td>TAN</td><td>0,32 mg KOH/g</td><td><span class="dot dot-amber" title="Monitorar"></span></td></tr>
+              <tr><td>Viscosidade a 40&nbsp;°C</td><td>44,7 cSt <span class="muted">(ISO VG 46)</span></td><td><span class="dot dot-green" title="Segue"></span></td></tr>
+            </tbody>
+          </table>
+          <p class="laudo-foot">
+            Mesmo laudo, duas reações possíveis: <em>“não faço ideia”</em> ou
+            <em>“sei exatamente o que fazer”</em>.
+          </p>
+        </div>
+      </aside>
+    </div>
+
+    <div class="trust-band">
+      <div class="wrap trust-inner">
+        <p class="trust-lead">19 anos de experiência em manutenção, fornecimento e purificação de óleo industrial.</p>
+        <figure class="clientes" id="clientes">
+          <figcaption>Indústrias que já passaram pela nossa mesa técnica</figcaption>
+          <ul class="logo-grid" id="logo-grid">
+            <li class="logo-item"><img src="assets/img/Airliquide.webp" alt="Air Liquide" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/ArcelorMittal.webp" alt="ArcelorMittal" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/Gestamp_Logo.png" alt="Gestamp" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/hyundai-mobis.webp" alt="Hyundai Mobis" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/Saint-Gobain_logo.svg.webp" alt="Saint-Gobain" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/SKF-Logo.svg.webp" alt="SKF" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/Thyssenkrupp_AG_Logo_2015.svg.webp" alt="thyssenkrupp" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/sulzer_logo.png" alt="Sulzer" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/mothersonlogo.png" alt="Motherson" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/autoneum.webp" alt="Autoneum" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/boellhoff.webp" alt="Böllhoff" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/Plascar.png" alt="Plascar" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/Sabaf.png" alt="Sabaf" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+            <li class="logo-item"><img src="assets/img/Valgroup.png" alt="Valgroup" loading="lazy" onerror="this.closest('.logo-item').remove()"></li>
+          </ul>
+          <p class="logo-fallback" id="logo-fallback" hidden>
+            Air Liquide · ArcelorMittal · Gestamp · Hyundai Mobis · Saint-Gobain · SKF ·
+            thyssenkrupp · Sulzer · Motherson · Autoneum · Böllhoff · Plascar ·
+            Sabaf · Valgroup
+          </p>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FAIXA DE NÚMEROS ======================= -->
+  <section class="stats-strip" aria-label="Números da CTF do Brasil">
+    <div class="wrap stats-inner">
+      <div><strong>19&nbsp;anos</strong><span>de experiência em óleo industrial</span></div>
+      <div><strong>48&nbsp;h</strong><span>do zero ao laudo lido</span></div>
+      <div><strong>5</strong><span>indicadores que decidem a troca</span></div>
+      <div><strong>7&nbsp;dias</strong><span>de garantia incondicional</span></div>
+    </div>
+  </section>
+
+  <!-- ======================= DOR / IDENTIFICAÇÃO ======================= -->
+  <section class="section section-alt" id="dores">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-rule"></span> Você já passou por isso?</p>
+        <h2>O laudo chega. Todo mundo olha pra você. E você não tem a resposta.</h2>
+      </header>
+
+      <div class="pain-cols" data-reveal>
+        <ul class="pain-list">
+          <li>O PDF chega por e-mail, você bate o olho em <strong>“19/17/14”</strong> e <strong>“TAN 0,28”</strong>, e fecha do mesmo jeito que abriu.</li>
+          <li>Fica quieto na reunião de novo, porque não tem argumento pra questionar a troca que o fornecedor sugeriu.</li>
+          <li>Troca o óleo <em>“por garantia”</em> — e nunca sabe se jogou fora óleo bom e dinheiro da empresa junto.</li>
+          <li>Ou adia a troca pra economizar, e passa a semana com medo de ter deixado a contaminação passar.</li>
+        </ul>
+        <ul class="pain-list">
+          <li>Chega a auditoria ISO 9001 / 14001, perguntam por que o óleo foi trocado, e você não tem como responder com dado.</li>
+          <li>Não sabe dizer se o filtro da máquina está realmente segurando partícula ou só enfeitando a linha.</li>
+          <li>Já tentou estudar sozinho. Todo material é denso demais, cheio de teoria, e você precisa de resposta rápida.</li>
+          <li>No fim do mês, a sensação é sempre a mesma: apagando incêndio, nunca prevenindo.</li>
+        </ul>
+      </div>
+
+      <div class="ruminacoes" data-reveal>
+        <p class="rum-lead">O que passa na cabeça enquanto o laudo está aberto na tela:</p>
+        <div class="rum-grid">
+          <blockquote>“Será que estou colocando o equipamento em risco sem perceber?”</blockquote>
+          <blockquote>“Se eu questionar essa troca e a máquina parar, a culpa cai em mim.”</blockquote>
+          <blockquote>“Todo mundo aqui finge que entende esse laudo. Acho que ninguém sabe de verdade.”</blockquote>
+          <blockquote>“Eu queria uma resposta rápida. Tudo que estudo é complicado demais.”</blockquote>
+        </div>
+        <p class="rum-close">
+          Marcou dois ou mais? O problema nunca foi falta de inteligência.
+          Foi a falta de alguém pra te mostrar o laudo sem enrolação.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= VIRADA / SOLUÇÃO ========================= -->
+  <section class="section" id="solucao">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-rule"></span> A virada</p>
+        <h2>Você não precisa virar engenheiro de lubrificação. Precisa de um atalho confiável.</h2>
+      </header>
+
+      <div class="virada-body" data-reveal>
+        <p>
+          O <strong>Decifra Óleo</strong> pega os cinco indicadores que realmente decidem a troca —
+          classe de contaminação, teor de água, acidez, viscosidade e eficiência de filtragem —
+          e te ensina a lê-los na ordem certa, cada um com a faixa de referência pronta
+          e uma regra de decisão simples:
+        </p>
+        <div class="semaforo">
+          <span class="sem sem-green"><span class="dot dot-green"></span> Verde: segue, só registra.</span>
+          <span class="sem sem-amber"><span class="dot dot-amber"></span> Amarelo: monitora de perto.</span>
+          <span class="sem sem-red"><span class="dot dot-red"></span> Vermelho: age agora.</span>
+        </div>
+        <p>
+          Em 48 horas, sem sair da sua mesa, você sai do
+          <em>“não sei o que isso significa”</em> para
+          <em>“sei o que este laudo está dizendo e o que fazer”</em>.
+        </p>
+      </div>
+
+      <div class="pilares" data-reveal>
+        <div class="pilar">
+          <h3>Direto ao ponto</h3>
+          <p>Vídeos curtos, um indicador por vez. Nada de aula de duas horas.</p>
+        </div>
+        <div class="pilar">
+          <h3>Feito pra decidir</h3>
+          <p>Cada número vem com faixa de referência e a ação correspondente.</p>
+        </div>
+        <div class="pilar">
+          <h3>Pra usar no dia seguinte</h3>
+          <p>Planilha e cartão de bolso pra consultar de pé, na frente da máquina.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= PARA QUEM É ========================= -->
+  <section class="section section-alt" id="para-quem">
+    <div class="wrap">
+      <div class="fit-grid" data-reveal>
+        <div class="fit fit-yes">
+          <h3>É pra você se…</h3>
+          <ul>
+            <li>Você recebe laudo de óleo hidráulico ou lubrificante e trava na hora de interpretar.</li>
+            <li>Quer parar de depender de fornecedor ou laboratório para uma decisão simples.</li>
+            <li>Precisa defender — ou contestar — uma troca de óleo com dado técnico na mão.</li>
+          </ul>
+        </div>
+        <div class="fit fit-no">
+          <h3>Não é pra você se…</h3>
+          <ul>
+            <li>Você procura acreditação de laboratório ou certificado de analista. Não é isso.</li>
+            <li>Quer um tratado de tribologia. Aqui é decisão rápida, não pós-graduação.</li>
+            <li>Não tem nenhum contato com análise de óleo no trabalho.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== O QUE VOCÊ RECEBE ===================== -->
+  <section class="section" id="conteudo">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-rule"></span> O que você recebe</p>
+        <h2>Seis módulos curtos, dois bônus de consulta rápida.</h2>
+        <p class="section-sub">
+          Tudo digital, acesso imediato. Assiste no computador ou no celular,
+          baixa os PDFs e usa offline no chão de fábrica.
+        </p>
+      </header>
+
+      <ol class="modulos" data-reveal>
+        <li>
+          <span class="mod-num">01</span>
+          <div>
+            <h3>O Mapa do Laudo</h3>
+            <p>Em 12 minutos você entende a anatomia de qualquer laudo: onde olhar primeiro, o que é ruído e os cinco campos que decidem tudo. Nunca mais abrir o PDF sem saber por onde começar.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mod-num">02</span>
+          <div>
+            <h3>NAS 1638 e ISO 4406 na prática</h3>
+            <p>O que significa “18/16/13”, por que a classe subiu e qual número dispara ação na sua máquina. Com tabela de conversão NAS ↔ ISO e alvos por tipo de sistema: hidráulico, engrenagem, servo-válvula.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mod-num">03</span>
+          <div>
+            <h3>TAN (acidez): quando se preocupar</h3>
+            <p>Ler o TAN em mg KOH/g, entender a curva de degradação do óleo e saber a partir de qual variação vale a troca — e quando é só oxidação normal do fluido.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mod-num">04</span>
+          <div>
+            <h3>Água e Viscosidade: a regra dos 3 números</h3>
+            <p>Água em ppm contra o ponto de saturação. Viscosidade em cSt a 40&nbsp;°C contra o grau ISO VG nominal. Três números, três limites, uma decisão.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mod-num">05</span>
+          <div>
+            <h3>O filtro está funcionando?</h3>
+            <p>Checklist de eficiência de filtragem: como cruzar o beta ratio, a contagem de partículas antes e depois e o intervalo do elemento para saber se o filtro entrega o que promete.</p>
+          </div>
+        </li>
+        <li>
+          <span class="mod-num">06</span>
+          <div>
+            <h3>Falar com autoridade</h3>
+            <p>Script pronto para levar o laudo à chefia, ao fornecedor e à auditoria. Quatro frases que transformam “eu acho que” em “o laudo mostra que”.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="bonus" data-reveal>
+        <p class="bonus-label">Vem junto</p>
+        <div class="bonus-grid">
+          <div class="bonus-item">
+            <h3>Planilha “Semáforo de Decisão”</h3>
+            <p>Você digita os valores do laudo. A planilha devolve verde, amarelo ou vermelho por indicador e uma recomendação única. Excel e Google Sheets.</p>
+          </div>
+          <div class="bonus-item">
+            <h3>Cartão de Bolso digital</h3>
+            <p>Uma página. Todas as faixas de referência. Salva no celular e consulta em pé, na frente do equipamento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== AUTORIDADE ===================== -->
+  <section class="section section-dark" id="autoridade">
+    <div class="wrap">
+      <div class="auth-grid" data-reveal>
+        <div class="auth-copy">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-rule"></span> Quem está por trás</p>
+          <h2>Isto é o que a nossa equipe técnica já explica, na prática, para cliente.</h2>
+          <p>
+            Com 19 anos de experiência, a CTF do Brasil faz manutenção, fornecimento e purificação
+            de óleo industrial para operações que não podem parar. O <strong>Decifra Óleo</strong> nasceu
+            de uma pergunta que a gente ouve toda semana: <em>“me ensina a ler isso aqui sozinho”</em>.
+          </p>
+          <p class="auth-quote-lead">Da cadeira que você senta, a gente já ouviu:</p>
+          <blockquote class="auth-quote">
+            “Vou ficar quieto de novo na reunião porque não tenho argumento técnico.
+            Preciso parar com isso.”
+          </blockquote>
+        </div>
+
+        <div class="auth-norms">
+          <p class="norms-title">Baseado nas normas que o seu laudo já cita</p>
+          <ul>
+            <li><strong>NAS 1638</strong> — classes de contaminação</li>
+            <li><strong>ISO 4406</strong> — código de limpeza do fluido</li>
+            <li><strong>ASTM D974 / D664</strong> — número de acidez (TAN)</li>
+            <li><strong>ISO 3448</strong> — classificação de viscosidade ISO VG</li>
+            <li><strong>ISO 16889</strong> — beta ratio e eficiência de filtro</li>
+          </ul>
+          <p class="norms-foot">
+            Não inventamos padrão. Ensinamos a ler o que o laboratório já usa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OBJEÇÕES / FAQ ===================== -->
+  <section class="section" id="faq">
+    <div class="wrap wrap-narrow">
+      <header class="section-head" data-reveal>
+        <p class="eyebrow"><span class="eyebrow-rule"></span> Antes de decidir</p>
+        <h2>As perguntas que você faria antes de tirar os R$ 67 do bolso.</h2>
+      </header>
+
+      <div class="faq" data-reveal>
+        <details>
+          <summary>Não tenho conhecimento técnico. Vou conseguir acompanhar?</summary>
+          <p>Sim. O guia começa do zero, um indicador por vez, com linguagem de chão de fábrica. Se você sabe o que é uma troca de óleo, tem base suficiente para acompanhar.</p>
+        </details>
+        <details>
+          <summary>Isso substitui a análise de laboratório?</summary>
+          <p>Não, e nem deve. O laboratório gera o laudo. O Decifra Óleo te ensina a ler o laudo que ele te manda — para você parar de receber o resultado sem saber o que fazer com ele.</p>
+        </details>
+        <details>
+          <summary>Funciona para qualquer óleo e qualquer máquina?</summary>
+          <p>Funciona para óleo hidráulico e lubrificante industrial, mineral ou sintético, em sistemas hidráulicos, de engrenagem, circulação e servo. Os princípios de leitura — contaminação, água, acidez, viscosidade — valem para praticamente todo laudo físico-químico. Óleos muito específicos (turbina a gás, transformador, grau alimentício) têm particularidades que o guia sinaliza, mas não aprofunda.</p>
+        </details>
+        <details>
+          <summary>E se eu não conseguir aplicar em 48 horas?</summary>
+          <p>As 48 horas são o tempo de estudo, não um prazo correndo contra você. O acesso não expira. Se levar uma semana, tudo bem — o material continua lá, e a planilha resolve na hora quando o próximo laudo chegar.</p>
+        </details>
+        <details>
+          <summary>Como eu recebo?</summary>
+          <p>Link de acesso imediato no e-mail, assim que o pagamento é confirmado. Área digital com vídeos e PDFs para baixar. Pagamento no cartão, Pix ou boleto.</p>
+        </details>
+        <details>
+          <summary>E se não servir para mim?</summary>
+          <p>7 dias de garantia incondicional. Pediu reembolso, devolvemos os R$ 67. Sem formulário, sem “por quê”.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFERTA / PREÇO ===================== -->
+  <section class="section section-alt" id="comprar">
+    <div class="wrap">
+      <div class="offer-grid" data-reveal>
+        <div class="offer-anchor">
+          <p class="eyebrow"><span class="eyebrow-rule"></span> A conta</p>
+          <h2>Quanto custa uma troca de óleo que não precisava acontecer?</h2>
+          <p>
+            Num reservatório de 200 litros, entre óleo novo, filtragem, mão de obra,
+            parada de máquina e descarte, uma troca desnecessária passa fácil de
+            <strong>R$ 4.000</strong>.
+          </p>
+          <p>
+            O <strong>Decifra Óleo</strong> custa <strong>R$ 67</strong> e te dá o critério
+            para saber se aquela troca precisava mesmo acontecer — nessa e em todas as próximas.
+          </p>
+          <p class="offer-anchor-note">
+            Valor de decisão de impulso. Não precisa de aprovação de compra,
+            não precisa abrir requisição.
+          </p>
+        </div>
+
+        <div class="offer-box">
+          <p class="offer-kicker">Acesso completo</p>
+          <h3>Decifra Óleo</h3>
+          <ul class="offer-list">
+            <li>6 módulos em vídeo curto</li>
+            <li>Módulo “Falar com autoridade” + script pronto</li>
+            <li>Planilha Semáforo de Decisão (Excel e Sheets)</li>
+            <li>Cartão de Bolso digital</li>
+            <li>Acesso imediato e vitalício</li>
+            <li>7 dias de garantia incondicional</li>
+          </ul>
+          <div class="price">
+            <span class="price-from">à vista</span>
+            <span class="price-now">R$&nbsp;67</span>
+            <span class="price-split">ou 2× de R$&nbsp;35,50</span>
+          </div>
+          <a class="btn btn-primary btn-lg btn-block" href="#" data-buy>Comprar por R$&nbsp;67</a>
+          <p class="offer-secure">Pagamento seguro · Cartão, Pix ou boleto</p>
+          <p class="offer-scarcity">
+            Os bônus (Planilha e Cartão de Bolso) entram junto na versão atual.
+            Quando virarem item avulso, quem já comprou continua com eles.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="section cta-final">
+    <div class="wrap wrap-narrow" data-reveal>
+      <h2>Da próxima vez que o laudo chegar, a sala inteira vai continuar olhando pra você.</h2>
+      <p>
+        A diferença é que você vai ter a resposta. Segurança para decidir, argumento para
+        defender a decisão, menos óleo bom no descarte e menos máquina parada por
+        contaminação que passou batido. Por R$ 67.
+      </p>
+      <a class="btn btn-primary btn-lg" href="#comprar" data-buy>Quero decidir pelo laudo, não pelo achismo</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="assets/img/Logo_CTF_Brasil_branco.svg" alt="CTF do Brasil" width="112" height="68"
+           onerror="this.remove();var s=document.getElementById('foot-fallback');if(s)s.hidden=false">
+      <strong id="foot-fallback" class="brand-fallback" hidden>CTF do Brasil</strong>
+      <p>Manutenção, fornecimento e purificação de óleo industrial. No presente, preservando o futuro.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Garantia</h4>
+      <p>7 dias, incondicional. Não gostou, não serviu, achou raso: você pede o reembolso e devolvemos os R$ 67.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <p>
+        <a href="mailto:comercial@ctfdobrasil.com">comercial@ctfdobrasil.com</a><br>
+        <a href="https://wa.me/5511978698857" rel="noopener">WhatsApp comercial: (11) 97869-8857</a>
+      </p>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p>
+      Conteúdo educacional. Não substitui análise laboratorial acreditada nem laudo emitido
+      por profissional habilitado. As faixas de referência são orientativas; a decisão final
+      deve considerar o manual do fabricante do equipamento e do óleo.
+    </p>
+    <p class="footer-bottom">
+      <span>© <span id="ano"></span> CTF do Brasil. Todos os direitos reservados.</span>
+      <span><a href="#">Política de Privacidade</a> · <a href="#">Termos de Uso</a></span>
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
